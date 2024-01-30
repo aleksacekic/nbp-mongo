@@ -5,6 +5,77 @@ body{
   background-image: white !important; 
 }
 
+.mejn{
+  background-color: white;
+}
+
+.balances{
+  display:flex;
+  flex-direction: row;
+}
+
+.totalbalance{
+  max-width: 1000px;
+  margin-left: 75px;
+  margin-top: 45px;
+  /* margin: 30px auto; */
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.expenseincome{
+  max-width: 1000px;
+  margin-left: 75px;
+  margin-top: 45px;
+  /* margin: 30px auto; */
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expense{
+  max-width: 1000px;
+  margin-left: 75px;
+  margin-top: 45px;
+  /* margin: 30px auto; */
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.income{
+  max-width: 1000px;
+  margin-left: 75px;
+  margin-top: 45px;
+  /* margin: 30px auto; */
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+
+
 .wrapper {
   margin: 0;
   padding: 0;
