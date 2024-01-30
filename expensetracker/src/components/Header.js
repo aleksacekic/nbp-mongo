@@ -9,10 +9,6 @@ const Header = () => {
     setFlag(!flag);
   };
 
-  const SAD_SE_TREBA_OVO_DODA = () => {
-    return 0;
-  };
-
   return (
     <header>
       <h1>Expense tracker</h1>
