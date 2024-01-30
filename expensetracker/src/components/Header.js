@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TiArrowSortedDown } from "react-icons/ti";
+// import { TiArrowSortedDown } from "react-icons/ti";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const Header = () => {

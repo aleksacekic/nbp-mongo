@@ -1,6 +1,17 @@
-body {
+body{
   margin: 0;
   padding: 0;
+  background-color: white !important;
+  background-image: white !important; 
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  background-color: #328f8a;
+  background-image: linear-gradient(90deg, #328f8a, #08ac4b);
+  background-color: white;
+  background-image: white; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,6 +23,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
 
 /* LOGIN DEO ------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
@@ -85,12 +98,14 @@ header a img {
   margin: 0 auto;
 }
 
-body {
+.bodyloginregister{
+  /* height: 100%; */
   background-color: #328f8a;
   background-image: linear-gradient(90deg, #328f8a, #08ac4b);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 /* -------------------------------------- */
 
