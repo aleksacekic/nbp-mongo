@@ -15,65 +15,99 @@ body{
 }
 
 .totalbalance{
-  max-width: 1000px;
+  color:gray;
+  width: 500px;
   margin-left: 75px;
   margin-top: 45px;
-  /* margin: 30px auto; */
   overflow: auto;
-  min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
-  padding-top: 20px;
+  padding-top: 35px;
+  padding-left: 55px;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  font-size:medium;
+  font-weight: bold;
+  background-color: rgb(249, 249, 249);
 }
 
 .expenseincome{
-  max-width: 1000px;
+  width: 500px;
   margin-left: 75px;
   margin-top: 45px;
-  /* margin: 30px auto; */
   overflow: auto;
-  min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
   padding-top: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(252, 252, 252);
 }
 
 .expense{
-  max-width: 1000px;
-  margin-left: 75px;
-  margin-top: 45px;
-  /* margin: 30px auto; */
   overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
-  padding-top: 20px;
+  /* border: 1px solid steelblue; */
+  /* padding: 30px; */
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:20px;
   border-radius: 5px;
-  /* display: flex;
-  flex-direction: row; */
+  background-color: white;
+  /* font-size: medium; */
+  font-weight: bold;
+  color:gray;
 }
 
 .income{
-  max-width: 1000px;
-  margin-left: 75px;
-  margin-top: 45px;
-  /* margin: 30px auto; */
+  margin-top: 15px;
   overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
-  padding-top: 20px;
+  /* border: 1px solid steelblue; */
+  /* padding: 30px; */
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:20px;
   border-radius: 5px;
-  /* display: flex;
-  flex-direction: row; */
+  background-color: white;
+  font-size: medium;
+  font-weight: bold;
+  color:gray;
 }
 
+.amountexpense{
+ 
+  color:black;
+  font-size:1cm;
+  display:flex;
+  color:red;
+}
+
+.amountincome{
+  color:black;
+  font-size:1cm;
+  display:flex;
+  color:green;
+}
+
+.amount{
+  margin-top:37px;
+  color:black;
+  font-size:1.5cm;
+  display:flex;
+}
+
+.euro{
+  position: relative;
+  top:5px;
+  right:6.5px;
+}
+
+.euroexpinc{
+  position: relative;
+  top:5px;
+  right:6.5px;
+}
 
 
 .wrapper {
@@ -190,11 +224,11 @@ header {
     rgba(48, 180, 112, 1) 44%
   );
 
-  font-size: 16px;
+  font-size: 18px;
   /* font-weight: 600; */
   letter-spacing: 1px;
   color: #fff;
-  padding: 15px;
+  padding: 21px;
   text-align: center;
   position: relative;
 }
@@ -212,11 +246,11 @@ h1 {
 .logout {
   display: flex;
   position: absolute;
-  top: 100%;
+  top: 91%;
   right: 5%;
   padding: 6px;
-  padding-right: 52px;
-  padding-left: 52px;
+  padding-right: 56px;
+  padding-left: 56px;
   border: 1px solid black;
   border-radius: 8px;
   transform: translateY(-50%);
