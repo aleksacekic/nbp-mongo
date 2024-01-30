@@ -9,6 +9,10 @@ const Header = () => {
     setFlag(!flag);
   };
 
+  const logOut = () => {
+    // KOD ZA LOGOUT
+  };
+
   return (
     <header>
       <h1>Expense tracker</h1>
@@ -21,7 +25,11 @@ const Header = () => {
       </div>
 
       <div>
-        {flag && <div className="logout">Logout</div>}
+        {flag && (
+          <div className="logout" onClick={logOut}>
+            Logout
+          </div>
+        )}
       </div>
     </header>
   );
