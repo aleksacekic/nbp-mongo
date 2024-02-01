@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: row;
   /* color: gray; */
-  width: 393px;
+  width: 400px;
   margin-left: 75px;
   margin-top: 35px;
   overflow: auto;
@@ -32,30 +32,32 @@ body {
   border-radius: 5px;
 }
 
-.itemright{
+.itemright {
   display: flex;
   flex-direction: column;
-  margin-left:17px;
-  margin-top:4px;
-  
+  margin-left: 17px;
+  margin-top: 4px;
 }
 
-.itemright1{
+.itemright1 {
   display: flex;
   flex-direction: row;
 }
 
-.itemright2{
+.itemright2 {
   display: flex;
   flex-direction: row;
   width: 240px;
   /* padding-right: 195px; */
 }
 
-.itemright3{
-  position:relative;
- right:-50px;
-  
+.itemright3 {
+  position: relative;
+  right: -50px;
+}
+
+p {
+  margin: 0;
 }
 
 .itemicon {
@@ -67,73 +69,78 @@ body {
   align-items: center;
 }
 
-.fastfood {
+.Food {
   background-color: rgb(253, 212, 215);
   color: rgb(253, 60, 74);
   font-size: xx-large;
 }
 
-.shopping {
+.Shopping {
   background-color: rgb(252, 238, 212);
   color: rgb(252, 172, 18);
   font-size: xx-large;
 }
 
-.car {
+.Transportation {
   background-color: rgb(189, 220, 255);
-  color: rgb(0,119,255);
+  color: rgb(0, 119, 255);
   font-size: xx-large;
 }
 
-.fun {
+.Fun {
   background-color: rgb(238, 229, 255);
   color: rgb(127, 61, 255);
   font-size: xx-large;
 }
 
-.health {
+.Health {
   background-color: rgb(207, 250, 234);
   color: rgb(0, 168, 107);
   font-size: xx-large;
 }
 
-.other {
+.Other {
   background-color: rgb(227, 228, 229);
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   font-size: xx-large;
 }
 
-.salary {
+.Salary {
   background-color: rgb(212, 247, 255);
   color: rgb(0, 137, 255);
   font-size: xx-large;
 }
-.loan {
+.Loan {
   background-color: rgb(255, 237, 205);
   color: rgb(255, 94, 77);
   font-size: xx-large;
 }
-.gift {
+.Gift {
   background-color: rgb(255, 224, 230);
   color: rgb(255, 52, 94);
   font-size: xx-large;
 }
-.gambling {
+.Gambling {
   background-color: rgb(255, 229, 204); /* Braon nijansa */
   color: rgb(139, 69, 19); /* Tamna braon boja teksta */
   font-size: xx-large;
 }
 
-.naslov{
+.naslov {
   font-weight: bold;
 }
 
-.opis{
-  color:gray;
+.opis {
+  color: gray;
 }
 
-.pare{
-  color:red;
+.pareminus{
+  color: red;
+  font-weight: bold;
+}
+
+.pareplus {
+  color: green;
   font-weight: bold;
 }
 
