@@ -11,6 +11,171 @@ body {
   flex-direction: column;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  /* color: gray; */
+  width: 393px;
+  margin-left: 75px;
+  margin-top: 35px;
+  overflow: auto;
+  border: 1px solid steelblue;
+  /* padding: 30px;
+  padding-top: 35px;
+  padding-left: 55px; */
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.itemright{
+  display: flex;
+  flex-direction: column;
+  margin-left:17px;
+  margin-top:4px;
+  
+}
+
+.itemright1{
+  display: flex;
+  flex-direction: row;
+}
+
+.itemright2{
+  display: flex;
+  flex-direction: row;
+  width: 240px;
+  /* padding-right: 195px; */
+}
+
+.itemright3{
+  position:relative;
+ right:-50px;
+  
+}
+
+.itemicon {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fastfood {
+  background-color: rgb(253, 212, 215);
+  color: rgb(253, 60, 74);
+  font-size: xx-large;
+}
+
+.shopping {
+  background-color: rgb(252, 238, 212);
+  color: rgb(252, 172, 18);
+  font-size: xx-large;
+}
+
+.car {
+  background-color: rgb(189, 220, 255);
+  color: rgb(0,119,255);
+  font-size: xx-large;
+}
+
+.fun {
+  background-color: rgb(238, 229, 255);
+  color: rgb(127, 61, 255);
+  font-size: xx-large;
+}
+
+.health {
+  background-color: rgb(207, 250, 234);
+  color: rgb(0, 168, 107);
+  font-size: xx-large;
+}
+
+.other {
+  background-color: rgb(227, 228, 229);
+  color: rgb(0,0,0);
+  font-size: xx-large;
+}
+
+.salary {
+  background-color: rgb(212, 247, 255);
+  color: rgb(0, 137, 255);
+  font-size: xx-large;
+}
+.loan {
+  background-color: rgb(255, 237, 205);
+  color: rgb(255, 94, 77);
+  font-size: xx-large;
+}
+.gift {
+  background-color: rgb(255, 224, 230);
+  color: rgb(255, 52, 94);
+  font-size: xx-large;
+}
+.gambling {
+  background-color: rgb(255, 229, 204); /* Braon nijansa */
+  color: rgb(139, 69, 19); /* Tamna braon boja teksta */
+  font-size: xx-large;
+}
+
+.naslov{
+  font-weight: bold;
+}
+
+.opis{
+  color:gray;
+}
+
+.pare{
+  color:red;
+  font-weight: bold;
+}
+
+.radio-button-group {
+  display: flex;
+  gap: 0px;
+  margin-left: 75px;
+  margin-top: 50px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Postavljanje teksta na sredinu */
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 118px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.radio-button input {
+  display: none; /* Sakrivanje radio buttona */
+}
+
+.radio-button:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #2b89fb;
+  color: white;
+  border-color: #2b89fb;
+}
+
+.selected:hover {
+  background-color: #2b89fb;
+}
+
 .plusincex {
   position: relative;
   top: 2px;
@@ -49,8 +214,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: 310px;
-  margin-top:20px;
+  margin-left: 70px;
+  margin-top: 20px;
 }
 
 .income-form {
@@ -59,8 +224,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-left: 70px;
-  margin-top:20px;
+  margin-left: 310px;
+  margin-top: 20px;
 }
 
 label {

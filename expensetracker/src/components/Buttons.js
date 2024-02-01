@@ -47,11 +47,11 @@ const Buttons = () => {
   return (
     <div>
       <div className="balancebuttons">
-        <button className="buttonb" onClick={promeniIncomeFlag}>
-          <FaPlus className="plusincex"></FaPlus>Add Income
-        </button>
         <button className="buttonb" onClick={promeniExpenseFlag}>
           <FaPlus className="plusincex"></FaPlus>Add Expense
+        </button>
+        <button className="buttonb" onClick={promeniIncomeFlag}>
+          <FaPlus className="plusincex"></FaPlus>Add Income
         </button>
       </div>
       {incomeFlag && (
@@ -129,7 +129,7 @@ const Buttons = () => {
               required
             >
               <option value="hrana">Food</option>
-              <option value="stan">Rental</option>
+              {/* <option value="stan">Rental</option> */}
               <option value="kupovina">Shopping</option>
               <option value="transport">Transportation</option>
               <option value="zabava">Fun</option>
