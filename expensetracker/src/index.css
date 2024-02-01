@@ -1,57 +1,114 @@
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: white !important;
-  background-image: white !important; 
+  background-image: white !important;
 }
 
-.mejn{
+.mejn {
   background-color: white;
   display: flex;
   flex-direction: column;
 }
 
-.plusincex{
+.plusincex {
   position: relative;
-  top:2px;
-  right:4px;
+  top: 2px;
+  right: 4px;
 }
 
-.buttonb{
+.buttonb {
   margin-left: 75px;
   margin-top: 50px;
   width: auto;
   height: 55px;
   border-radius: 15px;
-  border:1px solid steelblue;
+  border: 1px solid steelblue;
   font-weight: bold;
   font-size: large;
   color: white;
   background-color: rgb(4, 155, 4);
-  padding-left:15px;
-  padding-right:15px;
+  padding-left: 15px;
+  padding-right: 15px;
   cursor: pointer;
 }
 
-.buttonb:hover{
+.incomediv {
+  width: 400px;
+  margin-left: 75px;
+  margin-top: 45px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+}
+
+.expense-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 310px;
+  margin-top:20px;
+}
+
+.income-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 70px;
+  margin-top:20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* Stilizacija dugmeta */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.buttonb:hover {
   background-color: white;
-  color:rgb(4, 155, 4);
+  color: rgb(4, 155, 4);
   /* rgb(52, 159, 246) */
   transition-duration: 8ms;
 }
 
-.balancebuttons{
+.balancebuttons {
   display: flex;
   flex-direction: row;
 }
 
-.balances{
-  display:flex;
+.balances {
+  display: flex;
   flex-direction: row;
 }
 
-.totalbalance{
-  color:gray;
+.totalbalance {
+  color: gray;
   width: 500px;
   margin-left: 75px;
   margin-top: 45px;
@@ -63,12 +120,12 @@ body{
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  font-size:medium;
+  font-size: medium;
   font-weight: bold;
   background-color: rgb(249, 249, 249);
 }
 
-.expenseincome{
+.expenseincome {
   width: 500px;
   margin-left: 75px;
   margin-top: 45px;
@@ -82,69 +139,67 @@ body{
   background-color: rgb(252, 252, 252);
 }
 
-.expense{
+.expense {
   overflow: auto;
   /* border: 1px solid steelblue; */
   /* padding: 30px; */
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
   border-radius: 5px;
   background-color: white;
   /* font-size: medium; */
   font-weight: bold;
-  color:gray;
+  color: gray;
 }
 
-.income{
+.income {
   margin-top: 15px;
   overflow: auto;
   /* border: 1px solid steelblue; */
   /* padding: 30px; */
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
   border-radius: 5px;
   background-color: white;
   font-size: medium;
   font-weight: bold;
-  color:gray;
+  color: gray;
 }
 
-.amountexpense{
- 
-  color:black;
-  font-size:1cm;
-  display:flex;
-  color:red;
+.amountexpense {
+  color: black;
+  font-size: 1cm;
+  display: flex;
+  color: red;
 }
 
-.amountincome{
-  color:black;
-  font-size:1cm;
-  display:flex;
-  color:green;
+.amountincome {
+  color: black;
+  font-size: 1cm;
+  display: flex;
+  color: green;
 }
 
-.amount{
-  margin-top:37px;
-  color:black;
-  font-size:1.5cm;
-  display:flex;
+.amount {
+  margin-top: 37px;
+  color: black;
+  font-size: 1.5cm;
+  display: flex;
 }
 
-.euro{
+.euro {
   position: relative;
-  top:5px;
-  right:6.5px;
+  top: 5px;
+  right: 6.5px;
 }
 
-.euroexpinc{
+.euroexpinc {
   position: relative;
-  top:5px;
-  right:6.5px;
+  top: 5px;
+  right: 6.5px;
 }
-
 
 .wrapper {
   margin: 0;
@@ -152,7 +207,7 @@ body{
   background-color: #328f8a;
   background-image: linear-gradient(90deg, #328f8a, #08ac4b);
   background-color: white;
-  background-image: white; 
+  background-image: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -164,8 +219,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
 
 /* LOGIN DEO ------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
@@ -239,7 +292,7 @@ header a img {
   margin: 0 auto;
 }
 
-.bodyloginregister{
+.bodyloginregister {
   /* height: 100%; */
   background-color: #328f8a;
   background-image: linear-gradient(90deg, #328f8a, #08ac4b);
