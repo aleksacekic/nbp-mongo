@@ -19,28 +19,29 @@ const Buttons = () => {
   const [expenseData, setExpenseData] = useState({
     nazivTroska: "",
     kategorija: "hrana",
-    visinaTroska: "",
+    iznos: "",
     vremeTroska: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setExpenseData({
-      ...expenseData,
-      [name]: value,
-    });
-  };
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setExpenseData({
       nazivTroska: "",
       kategorija: "hrana",
-      visinaTroska: "",
+      iznos: "",
       vremeTroska: "",
     });
     // Ovde možete dodati logiku za slanje podataka na server ili lokalno skladište
     console.log("Podaci o trosku:", expenseData);
+  }; 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setExpenseData({
+      ...expenseData,
+      [name]: value,
+    });
   };
 
   return (
@@ -66,7 +67,7 @@ const Buttons = () => {
               required
             />
 
-            <label htmlFor="kategorija">Kategorija:</label>
+            <label htmlFor="kategorija">Category:</label>
             <select
               id="kategorija"
               name="kategorija"
@@ -74,26 +75,25 @@ const Buttons = () => {
               onChange={handleChange}
               required
             >
-              <option value="hrana">Hrana</option>
-              <option value="stan">Stan</option>
-              <option value="transport">Transport</option>
-              <option value="zabava">Zabava</option>
-              <option value="zdravlje">Zdravlje</option>
-              <option value="ostalo">Ostalo</option>
+              <option value="salary">Salary</option>
+              <option value="gift">Gift</option>
+              <option value="loan">Loan</option>
+              <option value="gambling">Gambling</option>
+              <option value="other">Other</option>
             </select>
 
-            <label htmlFor="visinaTroska">Visina troska:</label>
+            <label htmlFor="iznos">Amount:</label>
             <input
               type="number"
-              id="visinaTroska"
-              name="visinaTroska"
-              value={expenseData.visinaTroska}
+              id="iznos"
+              name="iznos"
+              value={expenseData.iznos}
               onChange={handleChange}
               min="0"
               required
             />
 
-            <label htmlFor="vremeTroska">Vreme troska:</label>
+            <label htmlFor="vremeTroska">Time:</label>
             <input
               type="datetime-local"
               id="vremeTroska"
@@ -103,14 +103,14 @@ const Buttons = () => {
               required
             />
 
-            <button type="submit">Dodaj trosak</button>
+            <button type="submit">Add income</button>
           </form>
         </div>
       )}
       {expenseFlag && (
         <div className="expense-form-container">
           <form onSubmit={handleSubmit} className="expense-form">
-            <label htmlFor="nazivTroska">Naziv troska:</label>
+            <label htmlFor="nazivTroska">Description of expense:</label>
             <input
               type="text"
               id="nazivTroska"
@@ -120,7 +120,7 @@ const Buttons = () => {
               required
             />
 
-            <label htmlFor="kategorija">Kategorija:</label>
+            <label htmlFor="kategorija">Category:</label>
             <select
               id="kategorija"
               name="kategorija"
@@ -128,26 +128,27 @@ const Buttons = () => {
               onChange={handleChange}
               required
             >
-              <option value="hrana">Hrana</option>
-              <option value="stan">Stan</option>
-              <option value="transport">Transport</option>
-              <option value="zabava">Zabava</option>
-              <option value="zdravlje">Zdravlje</option>
-              <option value="ostalo">Ostalo</option>
+              <option value="hrana">Food</option>
+              <option value="stan">Rental</option>
+              <option value="kupovina">Shopping</option>
+              <option value="transport">Transportation</option>
+              <option value="zabava">Fun</option>
+              <option value="zdravlje">Health</option>
+              <option value="ostalo">Other</option>
             </select>
 
-            <label htmlFor="visinaTroska">Visina troska:</label>
+            <label htmlFor="iznos">Amount:</label>
             <input
               type="number"
-              id="visinaTroska"
-              name="visinaTroska"
-              value={expenseData.visinaTroska}
+              id="iznos"
+              name="iznos"
+              value={expenseData.iznos}
               onChange={handleChange}
               min="0"
               required
             />
 
-            <label htmlFor="vremeTroska">Vreme troska:</label>
+            <label htmlFor="vremeTroska">Time:</label>
             <input
               type="datetime-local"
               id="vremeTroska"
@@ -157,7 +158,7 @@ const Buttons = () => {
               required
             />
 
-            <button type="submit">Dodaj trosak</button>
+            <button type="submit">Add expense</button>
           </form>
         </div>
       )}
