@@ -74,26 +74,29 @@ const BarChart = () => {
     };
   }, [selectedData]);
 
+  const handleRadioChange = (value) => {
+    setSelectedData(value);
+  };
+
   return (
     <div className="barchart">
-      <div>
-        <input
-          type="radio"
-          value="expenses"
-          checked={selectedData === "expenses"}
-          onChange={() => setSelectedData("expenses")}
-        />
-        <label>Expenses</label>
+      <div className="chartchoice">
+         <div
+        className={`radiochart ${
+          selectedData === "expenses" ? "selected1" : ""
+        }`}
+        onClick={() => handleRadioChange("expenses")}
+      >
+        <div className="chartlabel">Expenses</div>
       </div>
-      <div>
-        <input
-          type="radio"
-          value="incomes"
-          checked={selectedData === "incomes"}
-          onChange={() => setSelectedData("incomes")}
-        />
-        <label>Incomes</label>
+      <div
+        className={`radiochart ${selectedData === "incomes" ? "selected1" : ""}`}
+        onClick={() => handleRadioChange("incomes")}
+      >
+        <div className="chartlabel">Incomes</div>
       </div>
+      </div>
+     
       <canvas id="myChart" width="400" height="400"></canvas>
     </div>
   );

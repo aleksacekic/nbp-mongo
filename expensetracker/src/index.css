@@ -21,6 +21,36 @@ body {
   height: 400px;
 }
 
+.radiochart {
+  display: flex;
+  flex-direction: row;
+}
+
+.chartchoice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chartlabel {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(235, 146, 50);
+}
+
+.chartlabel:hover {
+  cursor: pointer;
+  background-color: rgb(220, 121, 41);
+}
+
+.selected1 {
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
 .list {
   display: flex;
   flex-direction: column;
