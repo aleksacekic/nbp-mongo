@@ -4,9 +4,7 @@ import Buttons from "./Buttons";
 import List from "./List";
 import BarChart from "./BarChart";
 
-
 const Main = () => {
-
   const [listOfExpInc, setlistOfExpInc] = useState([]);
 
   const handleAddExpense = (newExpense) => {
@@ -38,9 +36,11 @@ const Main = () => {
   return (
     <div className="mejn">
       <Balance />
-      <Buttons onAddExpense={handleAddExpense} onAddIncome={handleAddIncome}/>
-      <List expensesAndIncomes={listOfExpInc}/>
-      <BarChart expenses={listOfExpInc} />
+      <Buttons onAddExpense={handleAddExpense} onAddIncome={handleAddIncome} />
+      <div className="glavnideo">
+        <List expensesAndIncomes={listOfExpInc} />
+        <BarChart />
+      </div>
     </div>
   );
 };

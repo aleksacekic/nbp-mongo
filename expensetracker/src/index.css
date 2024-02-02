@@ -11,6 +11,16 @@ body {
   flex-direction: column;
 }
 
+.glavnideo {
+  display: flex;
+  flex-direction: row;
+}
+
+.barchart {
+  width: 400px;
+  height: 400px;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -177,6 +187,8 @@ p {
   gap: 0px;
   margin-left: 75px;
   margin-top: 50px;
+  width: 900px;
+  margin-right: 110px;
 }
 
 .radio-button {
