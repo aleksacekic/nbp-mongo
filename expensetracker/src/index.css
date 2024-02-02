@@ -14,6 +14,7 @@ body {
 .list {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .item {
@@ -105,6 +106,18 @@ p {
   font-size: xx-large;
 }
 
+.Other1 {
+  background-color: rgb(227, 228, 229);
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+}
+
+.Other2 {
+  background-color: rgb(227, 228, 229);
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+}
+
 .Salary {
   background-color: rgb(212, 247, 255);
   color: rgb(0, 137, 255);
@@ -126,6 +139,21 @@ p {
   font-size: xx-large;
 }
 
+.date-search-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 75px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.buttonsearch {
+  margin-left: 75px;
+  margin-top: 15px;
+  background-color: rgb(15, 190, 26);
+  font-weight: bold;
+}
+
 .naslov {
   font-weight: bold;
 }
@@ -134,7 +162,7 @@ p {
   color: gray;
 }
 
-.pareminus{
+.pareminus {
   color: red;
   font-weight: bold;
 }

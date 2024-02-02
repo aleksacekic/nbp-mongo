@@ -9,56 +9,85 @@ import { FaMoneyBillAlt } from "react-icons/fa";
 import { FaGift } from "react-icons/fa6";
 import { MdCasino } from "react-icons/md";
 import { MdVolunteerActivism } from "react-icons/md";
-import { FaEuroSign } from "react-icons/fa";
+// import { FaEuroSign } from "react-icons/fa";
 
-const List = () => {
+const List = ({ expensesAndIncomes }) => {
   const [selectedOption, setSelectedOption] = useState("all");
+  const [selectedDate, setSelectedDate] = useState("");
+  const [dateFlag, setDateFlag] = useState(false);
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   };
 
-  const expensesAndIncomes = [
-    {
-      nazivTroska: "Porodicna pizza",
-      kategorija: "Food",
-      iznos: "50",
-      vremeTroska: "12:30",
-    },
-    {
-      nazivTroska: "Plava majica",
-      kategorija: "Shopping",
-      iznos: "100",
-      vremeTroska: "14:45",
-    },
-    {
-      nazivTroska: "10l goriva",
-      kategorija: "Transportation",
-      iznos: "30",
-      vremeTroska: "09:15",
-    },
-    {
-      nazivTroska: "Plata za januar",
-      kategorija: "Salary",
-      iznos: "2000",
-      vremeTroska: "08:00",
-    },
-    {
-      nazivTroska: "Pozajmica od Alekse",
-      kategorija: "Loan",
-      iznos: "500",
-      vremeTroska: "18:45",
-    },
-    {
-      nazivTroska: "Laki siks 1,9,17,24,33,48",
-      kategorija: "Gambling",
-      iznos: "50",
-      vremeTroska: "20:00",
-    },
-  ];
+  const handleDateChange = (e) => {
+    setSelectedDate(e.target.value);
+  };
+
+  const promeniDateFlag = () => {
+    setDateFlag(!dateFlag);
+  };
+
+  const handleSearch = () => {
+    //slanje zahteva - pretraga na osnovu datuma
+    const formattedDate = formatSelectedDate(selectedDate);
+    // Ovde možete dodati logiku za slanje zahteva na osnovu formatiranog datuma
+    console.log("Izabrani formatiran datum:", formattedDate);
+  };
+
+  const formatSelectedDate = (selectedDate) => {
+    const dateObject = new Date(selectedDate);
+    const formattedDate =
+      dateObject.getDate() +
+      "." +
+      (dateObject.getMonth() + 1) +
+      "." +
+      dateObject.getFullYear();
+    return formattedDate;
+  };
+
+  // const expensesAndIncomes = [
+  //   {
+  //     nazivTroska: "Porodicna pizza",
+  //     kategorija: "Food",
+  //     iznos: "50",
+  //     vremeTroska: "12:30",
+  //   },
+  //   {
+  //     nazivTroska: "Plava majica",
+  //     kategorija: "Shopping",
+  //     iznos: "100",
+  //     vremeTroska: "14:45",
+  //   },
+  //   {
+  //     nazivTroska: "10l goriva",
+  //     kategorija: "Transportation",
+  //     iznos: "30",
+  //     vremeTroska: "09:15",
+  //   },
+  //   {
+  //     nazivTroska: "Plata za januar",
+  //     kategorija: "Salary",
+  //     iznos: "2000",
+  //     vremeTroska: "08:00",
+  //   },
+  //   {
+  //     nazivTroska: "Pozajmica od Alekse",
+  //     kategorija: "Loan",
+  //     iznos: "500",
+  //     vremeTroska: "18:45",
+  //   },
+  //   {
+  //     nazivTroska: "Laki siks 1,9,17,24,33,48",
+  //     kategorija: "Gambling",
+  //     iznos: "50",
+  //     vremeTroska: "20:00",
+  //   },
+  // ];
 
   return (
     <div>
+      {/* RADIO BUTTONI */}
       <div className="radio-button-group">
         <label
           className={`radio-button ${selectedOption === "all" && "selected"}`}
@@ -72,35 +101,150 @@ const List = () => {
           />
           All
         </label>
+
         <label
-          className={`radio-button ${
-            selectedOption === "expense" && "selected"
-          }`}
+          className={`radio-button ${selectedOption === "Food" && "selected"}`}
         >
           <input
             type="radio"
             name="expenseType"
-            value="expense"
-            checked={selectedOption === "expense"}
-            onChange={() => handleOptionChange("expense")}
+            value="Food"
+            checked={selectedOption === "Food"}
+            onChange={() => handleOptionChange("Food")}
           />
-          Expense
+          Food
         </label>
+
         <label
           className={`radio-button ${
-            selectedOption === "income" && "selected"
+            selectedOption === "Shopping" && "selected"
           }`}
         >
           <input
             type="radio"
             name="expenseType"
-            value="income"
-            checked={selectedOption === "income"}
-            onChange={() => handleOptionChange("income")}
+            value="Shopping"
+            checked={selectedOption === "Shopping"}
+            onChange={() => handleOptionChange("Shopping")}
           />
-          Income
+          Shopping
+        </label>
+
+        <label
+          className={`radio-button ${
+            selectedOption === "Transportation" && "selected"
+          }`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Transportation"
+            checked={selectedOption === "Transportation"}
+            onChange={() => handleOptionChange("Transportation")}
+          />
+          Transportation
+        </label>
+
+        <label
+          className={`radio-button ${selectedOption === "Fun" && "selected"}`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Fun"
+            checked={selectedOption === "Fun"}
+            onChange={() => handleOptionChange("Fun")}
+          />
+          Fun
+        </label>
+
+        <label
+          className={`radio-button ${
+            selectedOption === "Health" && "selected"
+          }`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Health"
+            checked={selectedOption === "Health"}
+            onChange={() => handleOptionChange("Health")}
+          />
+          Health
+        </label>
+
+        <label
+          className={`radio-button ${
+            selectedOption === "Salary" && "selected"
+          }`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Salary"
+            checked={selectedOption === "Salary"}
+            onChange={() => handleOptionChange("Salary")}
+          />
+          Salary
+        </label>
+
+        <label
+          className={`radio-button ${selectedOption === "Gift" && "selected"}`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Gift"
+            checked={selectedOption === "Gift"}
+            onChange={() => handleOptionChange("Gift")}
+          />
+          Gift
+        </label>
+
+        <label
+          className={`radio-button ${selectedOption === "Loan" && "selected"}`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Loan"
+            checked={selectedOption === "Loan"}
+            onChange={() => handleOptionChange("Loan")}
+          />
+          Loan
+        </label>
+
+        <label
+          className={`radio-button ${
+            selectedOption === "Gambling" && "selected"
+          }`}
+        >
+          <input
+            type="radio"
+            name="expenseType"
+            value="Gambling"
+            checked={selectedOption === "Gambling"}
+            onChange={() => handleOptionChange("Gambling")}
+          />
+          Gambling
         </label>
       </div>
+
+      {/* DATE SEARCH */}
+      <button className="buttonsearch" onClick={promeniDateFlag}>SEARCH BY DATE</button>
+      {dateFlag && (
+        <div className="date-search-container">
+          <label htmlFor="datepicker">Choose a date:</label>
+          <input
+            type="date"
+            id="datepicker"
+            value={selectedDate}
+            onChange={handleDateChange}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
+      )}
+      {/* LISTA AKTIVNOSTI */}
       <div className="list">
         {expensesAndIncomes.map((item, index) => (
           <div key={index} className="item">
@@ -120,14 +264,28 @@ const List = () => {
             <div className="itemright">
               <div className="itemright1">
                 <p className="itemright2 naslov">{item.kategorija}</p>
-                <p className={item.kategorija === "Salary" || item.kategorija === "Gift" || item.kategorija === "Loan" || item.kategorija === "Other2" ? "itemright3 pareplus" : "itemright3 pareminus"}>
-              {item.kategorija === "Salary" || item.kategorija === "Gift" || item.kategorija === "Loan" || item.kategorija === "Other2" ? "+" : "-"}
-              €{item.iznos}
-            </p>
+                <p
+                  className={
+                    item.kategorija === "Salary" ||
+                    item.kategorija === "Gift" ||
+                    item.kategorija === "Loan" ||
+                    item.kategorija === "Other2"
+                      ? "itemright3 pareplus"
+                      : "itemright3 pareminus"
+                  }
+                >
+                  {item.kategorija === "Salary" ||
+                  item.kategorija === "Gift" ||
+                  item.kategorija === "Loan" ||
+                  item.kategorija === "Other2"
+                    ? "+"
+                    : "-"}
+                  €{item.iznos}
+                </p>
               </div>
               <div className="itemright1">
-                <p className="itemright2 opis">{item.nazivTroska}</p>
-                <p className="itemright3 opis">{item.vremeTroska}</p>
+                <p className="itemright2 opis">{item.naziv}</p>
+                <p className="itemright3 opis">{item.vreme}</p>
               </div>
             </div>
           </div>
