@@ -24,7 +24,7 @@ body {
 .list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 180px;
 }
 
 .item {
