@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/login"); // ili bilo koju drugu rutu na koju želite da preusmerite korisnika
+  };
+
   return (
     <div className="bodyloginregister">
       <div className="login-page">
@@ -14,7 +20,7 @@ const Register = () => {
           <form className="login-form">
             <input type="text" placeholder="username" />
             <input type="password" placeholder="password" />
-            <button>register</button>
+            <button onClick={handleRegister}>register</button>
           </form>
         </div>
       </div>

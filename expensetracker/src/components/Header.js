@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 // import { TiArrowSortedDown } from "react-icons/ti";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [flag, setFlag] = useState(false);
+
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    navigate("/login");
+  };
 
   const dropdownLogOut = () => {
     setFlag(!flag);
   };
 
-  const logOut = () => {
-    // KOD ZA LOGOUT
-  };
+
 
   return (
     <header>
@@ -26,7 +30,7 @@ const Header = () => {
 
       <div>
         {flag && (
-          <div className="logout" onClick={logOut}>
+          <div className="logout" onClick={handleLogout}>
             Logout
           </div>
         )}
