@@ -55,6 +55,11 @@ const BarChart = ({chartInfo}) => {
           datasets,
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom", labels: { boxWidth: 12 } },
+          },
           scales: {
             x: {
               beginAtZero: true,
@@ -96,7 +101,9 @@ const BarChart = ({chartInfo}) => {
       </div>
       </div>
      
-      <canvas id="myChart" width="400" height="400"></canvas>
+      <div className="chart-wrap">
+        <canvas id="myChart"></canvas>
+      </div>
     </div>
   );
 };

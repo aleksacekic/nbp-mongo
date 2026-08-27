@@ -1,24 +1,41 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
-  const [flag, setFlag] = useState(false);
+  const [open, setOpen] = useState(false);
   const [korisnik, setKorisnik] = useState("");
+  const menuRef = useRef(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     setKorisnik(localStorage.getItem("korisnik") || "");
   }, []);
 
-  const dropdownLogOut = () => {
-    setFlag(!flag);
-  };
+  useEffect(() => {
+    if (!open) return;
 
-  const router = useRouter();
+    const handlePointer = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    const handleKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+
+    document.addEventListener("mousedown", handlePointer);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handlePointer);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [open]);
 
   const logOut = () => {
-    localStorage.clear()
+    localStorage.clear();
     router.push("/login");
   };
 
@@ -26,15 +43,20 @@ const Header = () => {
     <header>
       <h1>Expense Tracker</h1>
 
-      <div className="welcome" onClick={dropdownLogOut}>
-        Welcome, {korisnik}
-        <div className="reacticon">
-          <IoIosArrowDropdownCircle />
-        </div>
-      </div>
+      <div className="user-menu" ref={menuRef}>
+        <button
+          type="button"
+          className="welcome"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+        >
+          Welcome, {korisnik}
+          <span className="reacticon" data-open={open}>
+            <IoIosArrowDropdownCircle />
+          </span>
+        </button>
 
-      <div>
-        {flag && (
+        {open && (
           <div className="logout" onClick={logOut}>
             Logout
           </div>

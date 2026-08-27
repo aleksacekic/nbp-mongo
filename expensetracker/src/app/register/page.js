@@ -39,6 +39,10 @@ const Register = () => {
   return (
     <div className="bodyloginregister">
       <div className="login-page">
+        <h1 className="brand">
+          <span className="brand-dot" />
+          Expense Tracker
+        </h1>
         <div className="form">
           <div className="login">
             <div className="login-header">
