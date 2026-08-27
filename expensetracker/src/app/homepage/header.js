@@ -1,10 +1,15 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [flag, setFlag] = useState(false);
+  const [korisnik, setKorisnik] = useState("");
+
+  useEffect(() => {
+    setKorisnik(localStorage.getItem("korisnik") || "");
+  }, []);
 
   const dropdownLogOut = () => {
     setFlag(!flag);
@@ -22,7 +27,7 @@ const Header = () => {
       <h1>Expense Tracker</h1>
 
       <div className="welcome" onClick={dropdownLogOut}>
-        Welcome, {localStorage.getItem("korisnik")}
+        Welcome, {korisnik}
         <div className="reacticon">
           <IoIosArrowDropdownCircle />
         </div>

@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 
-const URI = 'mongodb+srv://lord0160:nJOMugparYGUPiFX@danilobaza.yrpkan0.mongodb.net/'
+const URI = process.env.MONGODB_URI
 const options = {}
 
-if (!URI) throw new Error("Problem sa URI")
+if (!URI) throw new Error("Nedostaje MONGODB_URI environment varijabla")
 
 let client = new MongoClient(URI, options)
 let clientPromise
