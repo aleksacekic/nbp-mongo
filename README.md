@@ -29,15 +29,15 @@ current balance, and breaking spending down by category with charts.
 
 ### Login
 
-![Login screen](docs/screenshots/Login-expense-tracker.png)
+![Login screen](expensetracker/docs/screenshots/Login-expense-tracker.png)
 
 ### Register
 
-![Register screen](docs/screenshots/register-expense-tracker.png)
+![Register screen](expensetracker/docs/screenshots/register-expense-tracker.png)
 
 ### Dashboard
 
-![Dashboard with balance and history](docs/screenshots/expensetracker.png)
+![Dashboard with balance and history](expensetracker/docs/screenshots/expensetracker.png)
 
 ## Getting Started
 
