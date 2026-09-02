@@ -3,7 +3,7 @@
 A full-stack personal finance web app for tracking income and expenses, viewing your
 current balance, and breaking spending down by category with charts.
 
-**Live demo:** https://your-app.vercel.app <!-- replace with your Vercel URL -->
+**Live demo:** https://expense-tracker-aleksacekic.vercel.app/ (you can login with aleksacekic:aleksacekic)
 
 ## Features
 
@@ -17,23 +17,26 @@ current balance, and breaking spending down by category with charts.
 
 ## Tech Stack
 
-| Layer    | Technology                                  |
-|----------|---------------------------------------------|
-| Frontend | Next.js 14 (App Router), React 18           |
-| Charts   | Chart.js, react-chartjs-2                   |
-| Backend  | Next.js Server Actions                      |
-| Database | MongoDB Atlas (`mongodb` driver)            |
-| Hosting  | Vercel                                      |
+| Layer    | Technology                        |
+| -------- | --------------------------------- |
+| Frontend | Next.js 14 (App Router), React 18 |
+| Charts   | Chart.js, react-chartjs-2         |
+| Backend  | Next.js Server Actions            |
+| Database | MongoDB Atlas (`mongodb` driver)  |
+| Hosting  | Vercel                            |
 
 ## Screenshots
 
 ### Login
+
 ![Login screen](docs/screenshots/login.png)
 
 ### Dashboard
+
 ![Dashboard with balance and history](docs/screenshots/dashboard.png)
 
 ### Category charts
+
 ![Spending by category](docs/screenshots/charts.png)
 
 ## Getting Started
