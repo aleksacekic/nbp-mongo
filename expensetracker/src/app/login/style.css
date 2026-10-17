@@ -123,6 +123,26 @@
   line-height: 1.5;
 }
 
+/* napomena sa demo nalogom */
+.demo-note {
+  margin: 0 0 20px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px dashed rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.demo-note code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;

@@ -58,6 +58,11 @@ const Login = () => {
               <p>Please enter your credentials to login.</p>
             </div>
           </div>
+          <div className="demo-note">
+            <strong>Note:</strong> To try the app, log in with the demo account
+            <br />
+            <code>aleksacekic</code> : <code>aleksacekic</code>
+          </div>
           <form className="login-form">
             <input type="text" placeholder="username" ref={userRef} />
             <input type="password" placeholder="password" ref={passRef} />
